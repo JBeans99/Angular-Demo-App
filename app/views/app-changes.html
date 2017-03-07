@@ -1,0 +1,14 @@
+<div id="upcomingChanges">
+    <p style="font-size: 21px">
+        Upcoming Changes
+    </p>
+    <br />
+    <ul ng-repeat="chg in change.data" style="list-style: none">
+        <li> <strong> {{chg.number}}  </strong> </li>
+        <ul>
+            <li> Outage: {{chg.u_outage_flag}} </li>
+            <li> Description: {{chg.short_description}} </li>
+            <li> Start Date: {{chg.start_date}} </li>
+        </ul>
+    </ul>
+</div>

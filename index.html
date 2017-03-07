@@ -1,0 +1,75 @@
+<html ng-app="snQuery">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="app/assets/loading-bar.css">
+    <link rel="stylesheet" href="app/assets/style.css">
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.20/system-polyfills.js"></script>
+
+    <!--Angular files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.min.js"></script>
+    <script src="app/assets/angular/angular-ui-router.js"></script>
+
+    <!-- Angular modules / components -->
+    <script src="app/module.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/components/app-result.js"></script>
+    <script src="app/components/app-home.js"></script>
+    <script src="app/components/app-about.js"></script>
+    <script src="app/components/app-changes.js"></script>
+    <script src="app/components/app-changesOutages.js"></script>
+    <script src="app/components/app-search.js"></script>
+    <script src="app/services/sharedData.js"></script>
+    <script src="app/services/query.js"></script>
+    <script src="app/assets/angular/loading-bar.js"></script>
+
+
+<title>AngularDemo</title>
+    
+</head>
+
+<body ng-cloak>
+            <nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <h2> <a ui-sref="home" > Angular Demo </a></h2>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li ><a ui-sref="changes"> Change Requests </a></li>
+                            <li ><a ui-sref="changesWithOutage"> Changes with Outages </a></li>
+                            <li ><a ui-sref="home.about"> About this App </a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="searchBar">
+                                   Search: &nbsp;
+                                 <app-search> </app-search>
+                            </li>
+                        </ul>
+                    </div>
+
+                 </div>
+            </nav>
+
+
+
+            <div id="content" class="mainContent">
+                    <div id="loading-bar-container"></div>
+
+                        <ui-view></ui-view>
+
+            </div>
+
+
+
+
+</body>
+
+</html>

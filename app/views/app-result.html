@@ -1,0 +1,32 @@
+<!--<div id="resultData" class="row">-->
+ 
+    <div class="errorDiv">
+        <span style="color:red"> {{appResult.error}} </span>
+    </div>
+
+<div id="resultView" >
+
+
+    <h4>Incident Number: </h4>
+    {{appResult.data.number}}
+
+        <br />
+
+    <h4>Short Description: </h4>
+    {{appResult.data.short_description}}
+
+        <br /> 
+
+    <h4>Caller: </h4>
+    {{appResult.callerID.name}}
+
+
+</div>
+
+
+
+<!--<div class="row resultSubmit">
+    <div class="col-md-10">
+        <button type="button" class="btn-primary btn-sm"><a ui-sref="home"></a>Return to search</button>
+    </div>
+</div>-->
