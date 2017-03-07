@@ -12,18 +12,9 @@
         getIncidentResults: getIncidentResults,
         addPersonResults: addPersonResults,
         getPersonResults: getPersonResults,
-        // incidentRes: null,
-        // personRes: null 
+
 
       };
-
-      // function addSearchNum(num) {
-      //   searchnum = num;
-      // }
-      
-      // function getSearchNum() {
-      //   return searchnum;
-      // }
 
       function addIncidentResults(incidentResults) {
         incidentResult = incidentResults;
