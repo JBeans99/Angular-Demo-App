@@ -12,8 +12,6 @@
         getIncidentResults: getIncidentResults,
         addPersonResults: addPersonResults,
         getPersonResults: getPersonResults,
-
-
       };
 
       function addIncidentResults(incidentResults) {

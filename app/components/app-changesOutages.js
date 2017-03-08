@@ -18,21 +18,16 @@
                 } 
             };
 
-
             var onError = function() {
                 model.error = "No results found ";
             };            
 
             model.$onInit = function() {
                 return query.getChangesOutages()
-                    .then(onDataComplete)
-                    
-            };
+                    .then(onDataComplete)       
+            };            
+        }     
 
-
-            
-        }  // End Controller     
-
-    }); // End Component
+    }); 
 
 }());
